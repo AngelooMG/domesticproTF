@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="separa"></div>
+  <header>
+    <div class="contenedor">
+      <div class="barra center">
+             <a class="navegacion_enlace" routerLink="/home"><h1 class="titulo">Inicio</h1></a>
+             <mat-form-field>
+              <mat-label>Filter</mat-label>
+              <input matInput (keyup)="applyFilter($event)" placeholder="Buscar" #input>
+            </mat-form-field>
+      </div>
+      </div>
+  </header>
+
+  <div class="separa"></div>
+  <div class="separa"></div>
+
+<div class="contenedor animate__animated animate__fadeInUp animate__delay-0.5s">
+  <table class="" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef> Edad </th>
+      <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="district">
+      <th mat-header-cell *matHeaderCellDef> Distrito </th>
+      <td mat-cell *matCellDef="let element"> {{element.district}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="primary" [routerLink]="['edicion',element.id]">
+          <span class="material-icons">visibility</span>
+        </button>
+      </td>
+      </ng-container>
+
+
+    <tr class="fondito center" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+
+  <div class="separa"></div>
+  <div class="separa"></div>
+</body>
+</html>

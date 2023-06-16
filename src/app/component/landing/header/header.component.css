@@ -1,0 +1,70 @@
+:root {
+  --primario: #F4F4F4;
+  --primarioOscuro: #D2D5D9;
+  --secundario: #4A596D;
+  --secundarioOscuro: #434343;
+  --negro: #000000;
+
+  --fuenteprincipal: 'Latos';
+}
+
+html, body { height: fit-content; }
+header{
+  background: var(--primarioOscuro);
+  padding: 0;
+}
+
+a{
+  color: var(--negro);
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.header_logo{
+  width: 9rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.barra{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  place-items: center;
+}
+
+@media(min-width: 768px) {
+  .barra{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+}
+
+.navegacion {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(min-width: 768px) {
+  .navegacion{
+      display: flex;
+      gap: 2rem;
+  }
+}
+
+.navegacion_enlace {
+  color: var(--negro);
+  margin-right: 1rem;
+  transition: all 0.5s ease;
+  font-size: 1.5rem;
+}
+
+.navegacion_enlace:hover {
+  color: var(--secundarioOscuro);
+}
+
+
+
+

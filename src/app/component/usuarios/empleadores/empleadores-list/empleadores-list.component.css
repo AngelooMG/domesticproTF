@@ -1,0 +1,113 @@
+:root {
+  --primario: #F4F4F4;
+  --primarioOscuro: #D2D5D9;
+  --secundario: #4A596D;
+  --secundarioOscuro: #434343;
+  --negro: #000000;
+
+  --fuenteprincipal: 'Latos';
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+html, body { height: fit-content; }
+
+.barra{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a{
+  color: var(--negro);
+  font-weight: bold;
+  font-size: 15px;
+  font-family: var(--fuenteprincipal);
+}
+
+
+.navegacion_enlace {
+  color: var(--negro);
+  margin-right: 1rem;
+  transition: all 0.5s ease;
+  font-size: 1.5rem;
+  font-family: var(--fuenteprincipal);
+}
+
+.navegacion_enlace:hover {
+  color: var(--secundarioOscuro);
+}
+
+
+/**Estilo Tabla*/
+
+.titulo{
+  font-weight: bold;
+  font-family: var(--fuenteprincipal);
+}
+
+.tabla{
+  max-width: min(80%, 200rem);
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+/*
+.datos {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 2rem;
+}
+
+.fila_header {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  font-size: 16px;
+  font-family: var(--fuenteprincipal);
+}
+
+.fila_name {
+  border-bottom: 1px solid #dee2e6;
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+  font-family: var(--fuenteprincipal);
+}
+
+.fila_name:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.fila_name:hover {
+  background-color: #e9ecef;
+}
+*/
+
+.demo-table {
+  width: 100%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  background-color: var(--primarioOscuro);
+}
+
+.demo-row-is-clicked:hover {
+  font-weight: bold;
+}
+
+.fondito{
+  background-color: var(--primarioOscuro);
+  font-weight: bold;
+}

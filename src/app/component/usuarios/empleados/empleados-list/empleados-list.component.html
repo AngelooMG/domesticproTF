@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="separa"></div>
+<div class="contenedor">
+  <h1 class="titulo_general">Empleados</h1>
+</div>
+  <main class="grid_doscolumnas_a contenedor">
+
+    <section>
+      <h2 class="title">Fitrar contenido:</h2>
+      <mat-form-field>
+        <input matInput placeholder="Buscar" (keyup)="applyFilter($event)" #input>
+      </mat-form-field>
+
+      <div class="campo_form">
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Distrito</mat-label>
+          <mat-select (selectionChange)="applyDistrict($event.value)">
+            <mat-option *ngFor="let district of extractDistricts(dataSource.filteredData)" [value]="district">
+              {{district}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="campo_form">
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Profesión</mat-label>
+          <mat-select (selectionChange)="applyProfession($event.value)">
+            <mat-option *ngFor="let profession of extractProfessions(dataSource.filteredData)" [value]="profession">
+              {{ profession }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+      <div class="baton">
+      <button mat-raised-button color="primary" (click)="clearFilters()">Limpiar filtros</button>
+      </div>
+
+    </section>
+
+
+    <section>
+  <div class="contenedor grid animate__animated animate__fadeInUp animate__delay-0.5s">
+    <ng-container *ngFor="let element of dataSource.filteredData">
+      <mat-card class="grey centrar_text">
+        <mat-card-header>
+          <img class="img_pro" src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" mat-card-image>
+        </mat-card-header>
+        <div class="separa"></div>
+        <mat-card-content>
+          <h2 class="catalog_title centrar_text">{{ element.name }}</h2>
+          <h3 class="catalog_subtitle">Distrito: <span class="juan">{{ element.district }}</span></h3>
+          <h3 class="catalog_subtitle">Edad: <span class="juan">{{ element.age }}</span></h3>
+          <h3 class="catalog_subtitle">Profesión: <span class="juan">{{ element.profession }}</span></h3>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="buttton" [routerLink]="['edicion', element.id]">
+            Más Información
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </ng-container>
+
+    <ng-container *ngIf="dataSource.filteredData.length === 0">
+      <div>
+        <h2 class="center">No se encontraron resultados para {{ input.value }} {{ selectedDistrict }}.</h2>
+      </div>
+    </ng-container>
+
+
+  </div>
+
+  <div class="separa"></div>
+  <div class="separa"></div>
+</section>
+</main>
+</body>
+</html>

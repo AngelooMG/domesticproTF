@@ -1,0 +1,36 @@
+:root {
+  --primario: #F4F4F4;
+  --primarioOscuro: #D2D5D9;
+  --secundario: #4A596D;
+  --secundarioOscuro: #434343;
+  --negro: #000000;
+
+  --fuenteprincipal: 'Latos';
+}
+
+html, body { height: fit-content; }
+
+
+.footer{
+  background-color: var(--primarioOscuro);
+padding: 1rem;
+}
+
+.container_footer{
+  max-width: 80%;
+}
+
+.texto_footer{
+  color: var(--negro);
+  opacity: 30%;
+}
+
+.flex_contacto{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icono{
+  margin: auto;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="separa"></div>
+  <div class="separa"></div>
+  <div class="formulario animate__animated animate__fadeInUp animate__delay-0.5s">
+    <mat-tab-group>
+      <mat-tab label="Registro">
+        <form [formGroup]="form" (submit)="aceptar()" class="hola">
+
+          <div class="separa"></div>
+          <label class="font_campo" for="">Nombre:</label>
+          <div class="campo_form centrar">
+            <mat-form-field class="full-width">
+              <input matInput required placeholder="Nombre" formControlName="name">
+            </mat-form-field>
+          </div>
+
+          <label class="font_campo" for="">DNI:</label>
+          <div class="campo_form centrar">
+            <mat-form-field class="full-width">
+              <input matInput required placeholder="DNI" formControlName="dni">
+            </mat-form-field>
+          </div>
+
+
+          <label class="font_campo" for="">Correo Electrónico:</label>
+
+          <div class="campo_form">
+            <mat-form-field class="full-width">
+              <input matInput required placeholder="Correo Electrónico" formControlName="email">
+            </mat-form-field>
+          </div>
+          <label class="font_campo" for="">Edad:</label>
+
+          <div class="campo_form">
+            <mat-form-field class="full-width">
+              <input matInput required placeholder="Edad" formControlName="age">
+            </mat-form-field>
+          </div>
+
+
+          <label class="font_campo" for="">Distrito:</label>
+          <div class="campo_form">
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Distrito</mat-label>
+              <mat-select formControlName="district">
+                <mat-option *ngFor="let districto of distritos" [value]="districto.value">
+                  {{districto.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+
+<!--
+          <label class="font_campo" for="">Contraseña</label>
+
+          <div class="campo_form">
+            <mat-form-field class="full-width">
+              <input matInput type="password" placeholder="Contraseña" required>
+            </mat-form-field>
+          </div>
+        -->
+          <button mat-raised-button color="primary" class="boton" (click)="aceptar()">Registrarse</button>
+          <h1>{{mensaje}}</h1>
+        </form>
+      </mat-tab>
+      <!--
+      <mat-tab id="login" label="Inicio de sesión">
+        <form class="hola">
+          <label class="font_campo" for="">Correo electrónico:</label>
+          <div class="campo_form">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Número de teléfono" required>
+            </mat-form-field>
+          </div>
+          <label class="font_campo" for="">Contraseña</label>
+
+          <div class="campo_form">
+            <mat-form-field class="full-width">
+              <input matInput type="password" placeholder="Contraseña" required>
+            </mat-form-field>
+          </div>
+
+          <button mat-raised-button color="primary" class="boton">Iniciar sesión</button>
+        </form>
+      </mat-tab>
+    -->
+    </mat-tab-group>
+  </div>
+  <div class="separa"></div>
+  <div class="separa"></div>
+</body>
+
+</html>

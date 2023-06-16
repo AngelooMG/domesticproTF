@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="separa"></div>
+
+  <main class="contenedor animate__animated animate__fadeInUp animate__delay-0.5s">
+    <h2 class="centrar_text titulo">¿Quienes Somos?</h2>
+    <div class="separa"></div>
+    <section class="grid_doscolumnas">
+      <div class="nosotros centrar_text">
+        <p class="justify">DomesticPro es una aplicación web que tiene como propósito ofrecer un canal seguro para
+          contratar u ofrecer servicios domésticos, tales como amas de casa, paseadores de perros, niñeros, jardineros,
+          entre otros. Puedes ofrecer dichos servicios teniendo en cuenta las diferentes habilidades que presentas.</p>
+
+        <p class="justify">Hemos establecido como objetivo el hecho de facilitar el acceso a empleados hogareños, los cuales
+          puedan brindar un servicio de confianza y puedan hacer de tu tiempo, algo más tranquilo. Asimismo, brindar
+          oportunidades de empleo a los distintos usuarios, los cuales estan interesados en brindar sus servicios.</p>
+      </div>
+
+      <div class="imagen centrar">
+        <img class=" img_nosotros img_border" src="./assets/img/Familiaxd.jpg" alt="">
+      </div>
+    </section>
+
+    <div class="separa"></div>
+    <div class="separa"></div>
+
+    <section class="grid_doscolumnas">
+      <div class="contenido_text">
+        <h2 class="centrar_text titulo">¿Por Qué trabajar con Nosotros?</h2>
+        <p class="justify">Nuestro trabajo como servicio consiste en mejorar la variedad de opciones de contratacion de servicios, ya que nuestra pagina contendrá una alta gama de trabajos domesticos. Esto significa que tenemos varias opciones para aquellos que buscan trabajar de este campo o aquellos que buscan personal específico para completar ciertas actividades que no le den tiempo de realizar.</p>
+        <p class="justify">Brindamos una mayor seguridad y confianza en nuestros usuarios, debido a las medidas de seguridad que implementamos tanto para contratar o para ser contratado, estas medidas hacen que sea fácil contratar trabajadores domésticos calificados.</p>
+        <div class="separa"></div>
+        <div class="separa"></div>
+      </div>
+      <div class="contenido_text">
+        <h2 class="centrar_text titulo">¿Cómo Funciona?</h2>
+        <p class="justify">Al crearte una cuenta en nuestra plataforma e iniciar sesion, podras hacer uso de todas las
+          caracteristicas gratuitas de nuestra web, tanto si deseas contratar a alguien para una labor como para ofrecer
+          tus servicios y postular a trabajos.</p>
+        <p class="justify">Tras haber realizado este proceso, tendrásn la capacidad y posibilidad del acceso a esto y
+          mucho más con la facilidad de utilizar una sola cuenta en DomesticPro.</p>
+        <div class="separa"></div>
+        <div class="separa"></div>
+      </div>
+    </section>
+
+    <div class="separa"></div>
+    <h2 class="centrar_text titulo">Elige lo que quieres Ser!</h2>
+    <section class="grid_doscolumnas">
+
+      <a routerLink="/registro-empleados">
+          <div class="contenedor__proyectos__uno zoom">
+          </div>
+      </a>
+
+
+      <a routerLink="/registro-empleadores">
+        <div class="contenedor__proyectos__dos zoom">
+        </div>
+    </a>
+
+    </section>
+    <div class="separa"></div>
+
+    <section>
+      <h2 class="centrar_text titulo">Contacto</h2>
+      <div class="separa"></div>
+      <form class="formulario">
+        <div class="form-group">
+          <label class="text_label">Nombres:</label>
+          <input type="text" id="nombres" name="nombres" required>
+          <div class="separa"></div>
+          <label class="text_label">Apellidos:</label>
+          <input type="text" id="apellidos" name="apellidos" required>
+        </div>
+
+        <div class="form-group">
+          <label class="text_label">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" required>
+        </div>
+
+        <div class="form-group">
+          <label class="text_label">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <label class="text_label">Mensaje:</label>
+        <div class="form-group">
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+        <button class="centrar boton" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+  <div class="separa"></div>
+  <div class="separa"></div>
+
+
+
+</body>
+
+</html>

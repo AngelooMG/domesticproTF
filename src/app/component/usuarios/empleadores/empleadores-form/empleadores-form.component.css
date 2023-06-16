@@ -1,0 +1,61 @@
+:root {
+  --primario: #F4F4F4;
+  --primarioOscuro: #D2D5D9;
+  --secundario: #4A596D;
+  --secundarioOscuro: #434343;
+  --negro: #000000;
+
+  --fuenteprincipal: 'Latos';
+}
+
+html, body { height: fit-content; }
+
+.formulario {
+  background-color: var(--primarioOscuro);
+  border: 3px solid var(--blanco);
+  border-radius: 1rem;
+  padding: 30px;
+  width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.formulario{
+  max-width: 100%;
+}
+
+.font_campo{
+  font-size: 1rem;
+  font-family: var(--fuenteprincipal);
+}
+
+.campo_form input{
+  width: 100%;
+}
+
+.campo_form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.full-width{
+  width: 100%;
+  padding-top: .5rem;
+  padding-bottom: .2rem;
+}
+
+.mat-mdc-tab-body-content {
+  height: 100%;
+  overflow: hidden;
+}
+
+.hola{
+  overflow: hidden;
+}
+
+.matNativeControl{
+  width: 100%;
+}

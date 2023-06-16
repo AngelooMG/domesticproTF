@@ -1,0 +1,130 @@
+:root {
+  --primario: #F4F4F4;
+  --primarioOscuro: #D2D5D9;
+  --secundario: #4A596D;
+  --secundarioOscuro: #434343;
+  --negro: #000000;
+  --blanco: #ffffff;
+
+
+  --fuenteprincipal: 'Latos';
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+html, body { height: fit-content; }
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--primario);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.contenedor {
+  max-width: min(95%, 200rem);
+  margin: 0 auto;
+}
+
+.img_nosotros{
+  width: 35rem;
+}
+
+.titulo{
+  font-weight: 400px;
+  font-size: 48px;
+}
+
+.contenido_text{
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.formulario {
+  background-color: var(--primarioOscuro);
+  border: 3px solid var(--blanco);
+  border-radius: 1rem;
+  padding: 30px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+form{
+  max-width: 100%;
+}
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-right: 10px;
+  font-family: var(--fuenteprincipal);
+  font-size: 1rem;
+}
+
+
+.form-group input {
+  border-radius: 1rem;
+  border: 1px solid var(--primarioOscuro);
+  padding: 5px;
+  width: 45%;
+  background-color: var(--primario); /*color gris*/
+}
+
+.form-group textarea{
+  border-radius: 1rem;
+  border: 1px solid var(--primarioOscuro);
+  padding: 5px;
+  width: 100%;
+  background-color: var(--primario); /*color gris*/
+}
+
+
+.text_label{
+  font-weight: bold;
+  margin-right: 10px;
+  font-family: var(--fuenteprincipal);
+  font-size: 1rem;
+}
+
+.contenedor__proyectos__uno {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/img/familia.jpeg);
+  background-size:cover;
+  padding: 10rem;
+  filter: blur(4px);
+  text-align: center;
+  margin: 2rem;
+}
+
+.contenedor__proyectos__dos {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/img/empleado.jpg);
+  background-size:auto;
+  padding: 10rem;
+  filter: blur(3px);
+  text-align: center;
+  margin: 2rem;
+}
+
+
+.zoom {
+  transition: .5s;
+}
+
+.zoom:hover {
+  transform: scale(107%);
+}

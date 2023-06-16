@@ -1,0 +1,112 @@
+:root {
+  --primario: #F4F4F4;
+  --primarioOscuro: #D2D5D9;
+  --secundario: #4A596D;
+  --secundarioOscuro: #434343;
+  --negro: #000000;
+
+  --fuenteprincipal: 'Latos';
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+html, body { height: fit-content; }
+
+
+.campos_form{
+  border: none;
+  font-family: var(--fuenteprincipal);
+  font-size: 3rem;
+  color: var(--negro);
+  font-weight: bolder;
+  background-color: var(--primario);
+}
+
+.campos_formita{
+  border: none;
+  font-family: var(--fuenteprincipal);
+  font-size: 1.5rem;
+  color: var(--negro);
+  font-weight: bolder;
+  background-color: var(--primario);
+}
+
+
+.campos_formito{
+  border: none;
+  font-family: var(--fuenteprincipal);
+  font-size: 1rem;
+  color: var(--negro);
+  font-weight: 400;
+  background-color: var(--primario);
+}
+
+img{
+max-width: 100%;
+}
+
+.img_profile{
+  width: 250px;
+
+}
+.btn{
+  background-color: var(--secundarioOscuro);
+  color: var(--primario);
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  width: 100%;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  margin-top: 20px;
+  transition: all 2s ease;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.btn:hover{
+  background-color: var(--secundario);
+  color: var(--blanco);
+
+}
+
+
+.alo{
+  padding: 5px;
+}
+
+.titulo{
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.subtitulo{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.material-symbols-outlined {
+  font-size: 35px;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+@media(min-width: 1108px) {
+  .grid_doscolumnas_a{
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+}
+
+@media(min-width: 1280px) {
+  .grid_doscolumnas_a{
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+
+}
+

@@ -1,0 +1,160 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primario: #F4F4F4;
+  --primarioOscuro: #D2D5D9;
+  --secundario: #4A596D;
+  --secundarioOscuro: #434343;
+  --negro: #000000;
+  --blanco: #ffffff;
+
+  --fuenteprincipal: 'Lato';
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@import '~animate.css/animate.min';
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: var(--fuenteprincipal), sans-serif;
+  font-size: 4rem;
+  background-color: var(--primario);
+}
+
+a{
+  text-decoration: none;
+}
+
+h1,h2,h3,h4{
+  font-family: var(--fuenteprincipal);
+}
+
+p{
+  font-size: 20px;
+  font-family: var(--fuenteprincipal);
+}
+
+.no_margin{
+  margin: 0;
+}
+
+.margin_auto{
+  margin: 0 auto;
+}
+
+.separa{
+  padding: 1rem;
+}
+
+.contenedor {
+  max-width: min(95%, 200rem);
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid{
+  display: grid;
+  place-items: center;
+}
+
+@media(min-width: 480px) {
+  .grid{
+      display: grid;
+  }
+}
+
+@media(min-width: 790px) {
+  .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media(min-width: 1280px) {
+  .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+  }
+  .grid_doscolumnas
+  {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+/*
+@media(min-width: 1500px) {
+  .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+  }
+}
+*/
+
+.centrar{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.centrar_text{
+  text-align: center;
+}
+
+.img_border{
+  border-radius: 2rem;
+}
+
+img{
+  max-width: 100%;
+}
+
+html, body { height: fit-content; }
+body { margin: 0; }
+
+.justify{
+  text-align: justify;
+}
+
+.boton{
+  background-color: var(--secundarioOscuro);
+  color: var(--primario);
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  width: 100%;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  margin-top: 20px;
+  transition: all 2s ease;
+}
+
+.boton:hover{
+  background-color: var(--negro);
+  color: var(--blanco);
+
+}
+
+html, body { height: 100%; }
+body { margin: 0;}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

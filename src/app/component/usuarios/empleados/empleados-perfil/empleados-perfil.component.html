@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <title>Empleado</title>
+</head>
+
+<body>
+
+  <div class="contenedor animate__animated animate__fadeInUp animate__delay-0.5s">
+    <div class="separa"></div>
+    <div class="separa"></div>
+
+
+    <div class="grid_doscolumnas_a">
+
+      <section>
+        <div class="perfil">
+           <!--<h1 class="titulo"> {{form.get('name')?.value}}</h1> -->
+            <h1 class="titulo"> {{user.name }}</h1>
+            <div class="alo"></div>
+            <img class="img_profile" src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Foto perfil">
+            <div class="separa"></div>
+           <!-- <h2>Edad: {{form.get('age')?.value}} años</h2>-->
+            <h2>Edad: {{user.age}} años</h2>
+            <!-- <h2>Profesion: {{form.get('profession')?.value}}</h2> -->
+            <h2>Profesion: {{user.profession}}</h2>
+            <!-- <a href="mailto:{{form.get('email')?.value}}" class="btn">Contacto</a> -->
+            <a href="mailto:{{user.email}}" class="btn">Contacto</a>
+        </div>
+        <div class="separa"></div>
+      </section>
+
+      <section>
+        <div class="alskjd">
+          <h1 class="subtitulo">Descripción</h1>
+          <!--<h3>{{form.get('descripcion')?.value}}</h3> -->
+          <h3>{{user.descripcion}}</h3>
+          <div class="separa"></div>
+          <h1 class="subtitulo">Ubicación</h1>
+          <!--<h3>{{form.get('district')?.value}}</h3> -->
+          <h3>{{user.district}}</h3>
+          <div class="separa"></div>
+          </div>
+
+<h2 class="subtitulo">Calificación</h2>
+
+
+<div>
+  <span class="material-symbols-outlined">star</span>
+  <span class="material-symbols-outlined">star</span>
+  <span class="material-symbols-outlined">star</span>
+  <span class="material-symbols-outlined">star</span>
+  <span class="material-symbols-outlined">star</span>
+</div>
+     </section>
+    </div>
+  </div>
+
+  <div class="separa"></div>
+
+
+</body>
+
+</html>
